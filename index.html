@@ -13,7 +13,7 @@
 <body>
 
     <div class="container">
-        <img class="img-fluid mx-auto d-block" width="500px" height="385px" src="logo.png" alt="Logo Santos às Cegas">
+        <img class="img-fluid mx-auto d-block" width="500" height="385" src="logo.png" alt="Logo Santos às Cegas">
 
         <h1>Cadastro para o Evento</h1>
 
@@ -21,18 +21,18 @@
         <form class="row g-3 needs-validation mt-3">
             <div class="mb-3">
                 <label class="form-label" for="input-nome-completo">Nome Completo</label>
-                <input type="text" class="form-control" placeholder="Fulano de tal" id="input-nome-completo" name="nome" required>
+                <input type="text" class="form-control" placeholder="Thiago Cirne Fontebasso" id="input-nome-completo" name="nome" required>
             </div>
 
             <div class="mb-3">
                 <label class="form-label" for="input-email">E-mail</label>
-                <input type="email" class="form-control" placeholder="name@example.com" id="input-email" name="email" required>
+                <input type="email" class="form-control" placeholder="thiago@unisantos.br" id="input-email" name="email" required>
             </div>
 
             <div class="col-6 mb-3">
                 <label class="form-label" for="input-telefone">Telefone</label>
-                <input type="tel" class="form-control" placeholder="(13) 1234-4321"
-                pattern="^([1-9]{2}) (?:[2-8]|9[1-9])[0-9]{3}-[0-9]{4}$" id="input-telefone" name="telefone" required>
+                <input type="tel" class="form-control" placeholder="(13) 91234-4321"
+                pattern="([1-9]{2}) [1-9]{1}?[0-9]{4}-[0-9]{4}" id="input-telefone" name="telefone" required>
             </div>
 
             <div class="col-6 mb-3">
@@ -47,7 +47,7 @@
                 <div>
                     <div class="form-check form-check-inline w-48">
                         <input class="form-check-input" type="radio" name="periodo" id="radio-manha" value="manha" checked>
-                        <label class="form-check-label" for="radio-manha" checked>Manhã</label>
+                        <label class="form-check-label" for="radio-manha">Manhã</label>
                     </div>
                     <div class="form-check form-check-inline w-48">
                         <input class="form-check-input" type="radio" name="periodo" id="radio-tarde" value="tarde">
@@ -75,7 +75,7 @@
             <div class="form-check">
                 <input class="form-check-input" type="checkbox" id="atestado-medico" required>
                 <label class="form-check-label" for="atestado-medico">
-                    Eu me <a href="#">comprometo em trazer Atestado Médico</a> possibilitando atividades físicas aeróbicas
+                    Eu me <b>comprometo em trazer Atestado Médico</b> possibilitando atividades físicas aeróbicas
                 </label>
             </div>
 
