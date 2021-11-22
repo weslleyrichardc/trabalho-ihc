@@ -4,19 +4,24 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Formulário para agendamento para a participação do projeto Santos as Cegas que tem como objetivo promover um evento de passeio turístico na orla de Santos para pessoas com deficiência, trazendo paradas culturais e sensoriais em monumentos e locais públicos.">
     <title>IHC - Projeto Santos às Cegas</title>
 
     <link rel="stylesheet" href="./assets/css/style.css">
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" crossorigin="anonymous"></script>
+    <script src="./assets/js/jquery.mask.min.js"></script>
+
     <script src="./assets/js/script.js"></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 </head>
 <body>
     <div class="container">
-        <img class="img-fluid mx-auto d-block" width="250" height="190" src="./assets/img/logo.png" alt="Logo Santos às Cegas">
+        <img class="img-fluid d-block" width="250" height="190" src="./assets/img/logo.png" alt="Logo Santos às Cegas">
+        <h2 class="mb-4 text-center">Cadastro para o Evento</h2>
 
-        <form class="row g-3 needs-validation mt-3">
+        <form id="form-agendamento" class="row g-3 needs-validation mt-3">
             <div class="informacoes-agendamento py-3 row">
-                <h2 class="mb-4">Cadastro para o Evento</h2>
 
                 <p>O sinal de <span class="text-danger">*</span> indica que o preenchimento do campo é obrigatório</p>
 
@@ -48,27 +53,27 @@
 
             <hr>
 
-            <div class="data-agendamento py-3 text-center">
-                <h2 class="mb-4">Agendamento</h2>
+            <div class="data-agendamento py-3">
+                <h2 class="mb-4 text-center">Agendamento</h2>
 
-                <fieldset id="buttons" class="d-flex justify-content-between">
+                <fieldset id="buttons" class="d-flex justify-content-around">
                     <div>
-                        <input class="form-check-input d-none" type="radio" name="input-agendamento" id="input-agendamento-1" value="02/07/2012-09:30" checked>
+                        <input class="d-none" type="radio" name="input-agendamento" id="input-agendamento-1" value="02/07/2012-09:30">
                         <label class="btn border-dark p-4" for="input-agendamento-1">02/07/2012 <br> 09:30</label>
                     </div>
 
                     <div>
-                        <input class="form-check-input d-none" type="radio" name="input-agendamento" id="input-agendamento-2" value="02/07/2012-10:30">
+                        <input class="d-none" type="radio" name="input-agendamento" id="input-agendamento-2" value="02/07/2012-10:30">
                         <label class="btn border-dark p-4" for="input-agendamento-2">02/07/2012 <br> 10:30</label>
                     </div>
 
                     <div>
-                        <input class="form-check-input d-none" type="radio" name="input-agendamento" id="input-agendamento-3" value="03/07/2012-08:00">
+                        <input class="d-none" type="radio" name="input-agendamento" id="input-agendamento-3" value="03/07/2012-08:00">
                         <label class="btn border-dark p-4" for="input-agendamento-3">03/07/2012 <br> 08:00</label>
                     </div>
 
                     <div>
-                        <input class="form-check-input d-none" type="radio" name="input-agendamento" id="input-agendamento-4" value="03/07/2012-13:00">
+                        <input class="d-none" type="radio" name="input-agendamento" id="input-agendamento-4" value="03/07/2012-13:00">
                         <label class="btn border-dark p-4" for="input-agendamento-4">03/07/2012 <br> 13:00</label>
                     </div>
                 </fieldset>
@@ -78,7 +83,7 @@
 
 
             <div class="perguntas-agendamento py-3 row">
-                <h2 class="mb-4">Consentimento de Participação</h2>
+                <h2 class="mb-4 text-center">Consentimento de Participação</h2>
 
                 <p>
                     Este documento faz parte da documentação do projeto “Santos às Cegas” e tem o objetivo de apontar e firmar os entendimentos e concordâncias relativas as condicionantes dos trajetos que ocorrerão na ciclovia da Orla de Santos.
@@ -92,12 +97,12 @@
                         <p class="form-label">1. Prontidão para Atividade Física - Algum médico já disse que você possui algum problema de coração e que só deveria realizar atividade física supervisionado por profissionais de saúde?</p>
                         <div>
                             <div class="form-check form-check-inline w-48">
-                                <input class="form-check-input" type="radio" name="question-one" id="question-one" value="sim" checked>
-                                <label class="form-check-label" for="question-one">Sim</label>
+                                <input class="form-check-input" type="radio" name="question-one" id="question-one-yes" value="sim" checked>
+                                <label class="form-check-label" for="question-one-yes">Sim</label>
                             </div>
                             <div class="form-check form-check-inline w-48">
-                                <input class="form-check-input" type="radio" name="question-one" id="question-one" value="nao">
-                                <label class="form-check-label" for="question-one">Não</label>
+                                <input class="form-check-input" type="radio" name="question-one" id="question-one-no" value="nao">
+                                <label class="form-check-label" for="question-one-no">Não</label>
                             </div>
                         </div>
                     </fieldset>
@@ -106,12 +111,12 @@
                         <p class="form-label">2. Você sente dores no peito quando pratica atividade física?</p>
                         <div>
                             <div class="form-check form-check-inline w-48">
-                                <input class="form-check-input" type="radio" name="question-two" id="question-two" value="sim" checked>
-                                <label class="form-check-label" for="question-two">Sim</label>
+                                <input class="form-check-input" type="radio" name="question-two" id="question-two-yes" value="sim" checked>
+                                <label class="form-check-label" for="question-two-yes">Sim</label>
                             </div>
                             <div class="form-check form-check-inline w-48">
-                                <input class="form-check-input" type="radio" name="question-two" id="question-two" value="nao">
-                                <label class="form-check-label" for="question-two">Não</label>
+                                <input class="form-check-input" type="radio" name="question-two" id="question-two-no" value="nao">
+                                <label class="form-check-label" for="question-two-no">Não</label>
                             </div>
                         </div>
                     </fieldset>
@@ -120,12 +125,12 @@
                         <p class="form-label">3. No último mês, você sentiu dores no peito quando praticou atividade física?</p>
                         <div>
                             <div class="form-check form-check-inline w-48">
-                                <input class="form-check-input" type="radio" name="question-three" id="question-three" value="sim" checked>
-                                <label class="form-check-label" for="question-three">Sim</label>
+                                <input class="form-check-input" type="radio" name="question-three" id="question-three-yes" value="sim" checked>
+                                <label class="form-check-label" for="question-three-yes">Sim</label>
                             </div>
                             <div class="form-check form-check-inline w-48">
-                                <input class="form-check-input" type="radio" name="question-three" id="question-three" value="nao">
-                                <label class="form-check-label" for="question-three">Não</label>
+                                <input class="form-check-input" type="radio" name="question-three" id="question-three-no" value="nao">
+                                <label class="form-check-label" for="question-three-no">Não</label>
                             </div>
                         </div>
                     </fieldset>
@@ -134,12 +139,12 @@
                         <p class="form-label">4. Você apresenta desequilíbrio devido à tontura e/ ou perda de consciência?</p>
                         <div>
                             <div class="form-check form-check-inline w-48">
-                                <input class="form-check-input" type="radio" name="question-four" id="question-four" value="sim" checked>
-                                <label class="form-check-label" for="question-four">Sim</label>
+                                <input class="form-check-input" type="radio" name="question-four" id="question-four-yes" value="sim" checked>
+                                <label class="form-check-label" for="question-four-yes">Sim</label>
                             </div>
                             <div class="form-check form-check-inline w-48">
-                                <input class="form-check-input" type="radio" name="question-four" id="question-four" value="nao">
-                                <label class="form-check-label" for="question-four">Não</label>
+                                <input class="form-check-input" type="radio" name="question-four" id="question-four-no" value="nao">
+                                <label class="form-check-label" for="question-four-no">Não</label>
                             </div>
                         </div>
                     </fieldset>
@@ -148,12 +153,12 @@
                         <p class="form-label">5. Você possui algum problema ósseo ou articular que poderia ser piorado pela atividade física?</p>
                         <div>
                             <div class="form-check form-check-inline w-48">
-                                <input class="form-check-input" type="radio" name="question-five" id="question-five" value="sim" checked>
-                                <label class="form-check-label" for="question-five">Sim</label>
+                                <input class="form-check-input" type="radio" name="question-five" id="question-five-yes" value="sim" checked>
+                                <label class="form-check-label" for="question-five-yes">Sim</label>
                             </div>
                             <div class="form-check form-check-inline w-48">
-                                <input class="form-check-input" type="radio" name="question-five" id="question-five" value="nao">
-                                <label class="form-check-label" for="question-five">Não</label>
+                                <input class="form-check-input" type="radio" name="question-five" id="question-five-no" value="nao">
+                                <label class="form-check-label" for="question-five-no">Não</label>
                             </div>
                         </div>
                     </fieldset>
@@ -162,12 +167,12 @@
                         <p class="form-label">6. Você toma atualmente algum medicamento para pressão arterial e/ou problema de coração?</p>
                         <div>
                             <div class="form-check form-check-inline w-48">
-                                <input class="form-check-input" type="radio" name="question-six" id="question-six" value="sim" checked>
-                                <label class="form-check-label" for="question-six">Sim</label>
+                                <input class="form-check-input" type="radio" name="question-six" id="question-six-yes" value="sim" checked>
+                                <label class="form-check-label" for="question-six-yes">Sim</label>
                             </div>
                             <div class="form-check form-check-inline w-48">
-                                <input class="form-check-input" type="radio" name="question-six" id="question-six" value="nao">
-                                <label class="form-check-label" for="question-six">Não</label>
+                                <input class="form-check-input" type="radio" name="question-six" id="question-six-no" value="nao">
+                                <label class="form-check-label" for="question-six-no">Não</label>
                             </div>
                         </div>
                     </fieldset>
@@ -176,12 +181,12 @@
                         <p class="form-label">7. Sabe de alguma outra razão pela qual você não deve praticar atividade física?</p>
                         <div>
                             <div class="form-check form-check-inline w-48">
-                                <input class="form-check-input" type="radio" name="question-seven" id="question-seven" value="sim" checked>
-                                <label class="form-check-label" for="question-seven">Sim</label>
+                                <input class="form-check-input" type="radio" name="question-seven" id="question-seven-yes" value="sim" checked>
+                                <label class="form-check-label" for="question-seven-yes">Sim</label>
                             </div>
                             <div class="form-check form-check-inline w-48">
-                                <input class="form-check-input" type="radio" name="question-seven" id="question-seven" value="nao">
-                                <label class="form-check-label" for="question-seven">Não</label>
+                                <input class="form-check-input" type="radio" name="question-seven" id="question-seven-no" value="nao">
+                                <label class="form-check-label" for="question-seven-no">Não</label>
                             </div>
                         </div>
                     </fieldset>
@@ -190,12 +195,12 @@
                         <p class="form-label">8. Tem diabetes?</p>
                         <div>
                             <div class="form-check form-check-inline w-48">
-                                <input class="form-check-input" type="radio" name="question-eight" id="question-eight" value="sim" checked>
-                                <label class="form-check-label" for="question-eight">Sim</label>
+                                <input class="form-check-input" type="radio" name="question-eight" id="question-eight-yes" value="sim" checked>
+                                <label class="form-check-label" for="question-eight-yes">Sim</label>
                             </div>
                             <div class="form-check form-check-inline w-48">
-                                <input class="form-check-input" type="radio" name="question-eight" id="question-eight" value="nao">
-                                <label class="form-check-label" for="question-eight">Não</label>
+                                <input class="form-check-input" type="radio" name="question-eight" id="question-eight-no" value="nao">
+                                <label class="form-check-label" for="question-eight-no">Não</label>
                             </div>
                         </div>
                     </fieldset>
@@ -204,12 +209,12 @@
                         <p class="form-label">9. Informações e fornecimento de equipamentos para a segurança sanitária - Declaro que seguirei as orientações para posturas adequadas durante a pandemia e utilizarei os equipamentos e insumos fornecidos: máscara e touca descartável, capacete e uso de álcool em gel durante o trajeto.</p>
                         <div>
                             <div class="form-check form-check-inline w-48">
-                                <input class="form-check-input" type="radio" name="question-nine" id="question-nine" value="sim" checked>
-                                <label class="form-check-label" for="question-nine">Sim</label>
+                                <input class="form-check-input" type="radio" name="question-nine" id="question-nine-yes" value="sim" checked>
+                                <label class="form-check-label" for="question-nine-yes">Sim</label>
                             </div>
                             <div class="form-check form-check-inline w-48">
-                                <input class="form-check-input" type="radio" name="question-nine" id="question-nine" value="nao">
-                                <label class="form-check-label" for="question-nine">Não</label>
+                                <input class="form-check-input" type="radio" name="question-nine" id="question-nine-no" value="nao">
+                                <label class="form-check-label" for="question-nine-no">Não</label>
                             </div>
                         </div>
                     </fieldset>
@@ -218,12 +223,12 @@
                         <p class="form-label">10. Da ciência da atividade esportiva - Reconheço e assumo livremente os riscos conhecidos, e entendo que, como qualquer atividade física a prática do ciclismo, mesmo em condições controladas, possui algum risco de acidente, como: lesões, escoriações, quedas e assim assumo responsabilidade pela minha participação e/ou de meu responsável legal:</p>
                         <div>
                             <div class="form-check form-check-inline w-48">
-                                <input class="form-check-input" type="radio" name="question-ten" id="question-ten" value="sim" checked>
-                                <label class="form-check-label" for="question-ten">Sim, autorizo</label>
+                                <input class="form-check-input" type="radio" name="question-ten" id="question-ten-yes" value="sim" checked>
+                                <label class="form-check-label" for="question-ten-yes">Sim, autorizo</label>
                             </div>
                             <div class="form-check form-check-inline w-48">
-                                <input class="form-check-input" type="radio" name="question-ten" id="question-ten" value="nao">
-                                <label class="form-check-label" for="question-ten">Não, não autorizo</label>
+                                <input class="form-check-input" type="radio" name="question-ten" id="question-ten-no" value="nao">
+                                <label class="form-check-label" for="question-ten-no">Não, não autorizo</label>
                             </div>
                         </div>
                     </fieldset>
@@ -232,12 +237,12 @@
                         <p class="form-label">11. Da cessão do direito de imagem - Autorizo o uso de minha imagem e voz (e/ou de meu responsável) em todo e qualquer material de divulgação, seja vídeo, áudio ou impresso, para ser utilizado pelo projeto Santos às Cegas e/ou equipes de imprensa autorizadas. A presente autorização é concedida a título gratuito, abrangendo o uso em todo território nacional e no exterior, em todas as suas modalidades e, em destaque, das seguintes formas: (I) vídeo; (II) sites; (III) relatórios (IV) programas de televisão, rádio, reportagens para jornais e revistas; (V) redes sociais (Facebook, Youtube, Instagram, outros); entre outras peças de comunicação, por período indeterminado. Por esta ser a expressão da minha vontade declaro que autorizo o uso anteriormente descrito sem que nada haja a ser reclamado a título de direitos conexos à imagem ou a qualquer outro, e assino a presente autorização.</p>
                         <div>
                             <div class="form-check form-check-inline w-48">
-                                <input class="form-check-input" type="radio" name="question-eleven" id="question-eleven" value="sim" checked>
-                                <label class="form-check-label" for="question-eleven">Sim, autorizo</label>
+                                <input class="form-check-input" type="radio" name="question-eleven" id="question-eleven-yes" value="sim" checked>
+                                <label class="form-check-label" for="question-eleven-yes">Sim, autorizo</label>
                             </div>
                             <div class="form-check form-check-inline w-48">
-                                <input class="form-check-input" type="radio" name="question-eleven" id="question-eleven" value="nao">
-                                <label class="form-check-label" for="question-eleven">Não, não autorizo</label>
+                                <input class="form-check-input" type="radio" name="question-eleven" id="question-eleven-no" value="nao">
+                                <label class="form-check-label" for="question-eleven-no">Não, não autorizo</label>
                             </div>
                         </div>
                     </fieldset>
@@ -259,9 +264,8 @@
             </div>
 
             <div class="col-12 mt-4">
-                <button class="btn btn-primary" type="submit">Enviar</button>
+                <button id="form-agendamento-submit" class="btn btn-primary" type="submit">Enviar</button>
             </div>
-
         </form>
     </div>
 </body>
