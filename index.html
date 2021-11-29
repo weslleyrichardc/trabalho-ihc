@@ -17,84 +17,106 @@
 </head>
 <body>
     <div class="container">
-        <img class="img-fluid d-block" width="250" height="190" src="./assets/img/logo.png" alt="Logo Santos às Cegas">
-        <h2 class="mb-4 text-center">Cadastro para o Evento</h2>
+        <header>
+            <h1>
+                <img class="img-fluid d-block" width="250" height="190" src="./assets/img/logo.png" alt="Santos às Cegas">
+            </h1>
+        </header>
+
+        <nav>
+            <ul class="nav" tabindex="-1">
+                <li class="nav-item">
+                  <a class="nav-link active" aria-current="page" href="#informacoes">Informações</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#agendamento">Agendamento</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#perguntas">Perguntas</a>
+                </li>
+            </ul>
+        </nav>
 
         <form id="form-agendamento" class="row g-3 needs-validation mt-3">
-            <div class="informacoes-agendamento py-3 row">
-                <p>O sinal de <span class="text-danger">*</span> indica que o preenchimento do campo é obrigatório</p>
+            <section id="informacoes">
+                <div class="informacoes-agendamento py-3 row">
+                    <h2 class="mb-4 text-center">Cadastro para o Evento</h2>
 
-                <div class="col-md-6 mb-3">
-                    <label class="form-label" for="input-nome-completo">Nome Completo <span class="text-danger">*</span></label>
-                    <input type="text" class="form-control" placeholder="Thiago Cirne Fontebasso" id="input-nome-completo" name="nome" required>
-                </div>
+                    <p>O sinal de <span class="text-danger">*</span> indica que o preenchimento do campo é obrigatório</p>
 
-                <div class="col-md-6 mb-3">
-                    <label class="form-label" for="input-email">E-mail <span class="text-danger">*</span></label>
-                    <input type="email" class="form-control" placeholder="thiago@unisantos.br" id="input-email" name="email" required>
-                </div>
-
-                <div class="col-md-4 mb-3">
-                    <label class="form-label" for="input-rg">Número RG ou RNE <span class="text-danger">*</span></label>
-                    <input type="text" class="form-control" placeholder="01.234.567-8" id="input-rg" name="rg" required>
-                </div>
-
-                <div class="col-md-4 mb-3">
-                    <label class="form-label" for="input-telefone">Telefone <span class="text-danger">*</span></label>
-                    <input type="text" class="form-control" placeholder="(13) 91234-4321" id="input-telefone" name="telefone" required>
-                </div>
-
-                <div class="col-md-4 mb-3">
-                    <label class="form-label" for="input-idade">Idade <span class="text-danger">*</span></label>
-                    <input type="number" class="form-control" min="1" max="100" placeholder="18" id="input-idade" name="idade" required>
-                </div>
-            </div>
-
-            <hr>
-
-            <div class="data-agendamento py-3">
-                <h2 class="mb-4 text-center">Agendamento</h2>
-
-                <fieldset id="buttons" class="d-md-flex justify-content-around">
-                    <div>
-                        <input class="d-none" type="radio" name="input-agendamento" id="input-agendamento-1" value="02/07/2012-09:30">
-                        <label class="btn border-dark p-4" for="input-agendamento-1">02/07/2012 <br> 09:30</label>
+                    <div class="col-md-6 mb-3">
+                        <label class="form-label" for="input-nome-completo">Nome Completo <span class="text-danger">*</span></label>
+                        <input type="text" class="form-control" placeholder="Thiago Cirne Fontebasso" id="input-nome-completo" name="nome" required>
                     </div>
 
-                    <div>
-                        <input class="d-none" type="radio" name="input-agendamento" id="input-agendamento-2" value="02/07/2012-10:30">
-                        <label class="btn border-dark p-4" for="input-agendamento-2">02/07/2012 <br> 10:30</label>
+                    <div class="col-md-6 mb-3">
+                        <label class="form-label" for="input-email">E-mail <span class="text-danger">*</span></label>
+                        <input type="email" class="form-control" placeholder="thiago@unisantos.br" id="input-email" name="email" required>
                     </div>
 
-                    <div>
-                        <input class="d-none" type="radio" name="input-agendamento" id="input-agendamento-3" value="03/07/2012-08:00">
-                        <label class="btn border-dark p-4" for="input-agendamento-3">03/07/2012 <br> 08:00</label>
+                    <div class="col-md-4 mb-3">
+                        <label class="form-label" for="input-rg">Número RG ou RNE <span class="text-danger">*</span></label>
+                        <input type="text" class="form-control" placeholder="01.234.567-8" id="input-rg" name="rg" required>
                     </div>
 
-                    <div>
-                        <input class="d-none" type="radio" name="input-agendamento" id="input-agendamento-4" value="03/07/2012-13:00">
-                        <label class="btn border-dark p-4" for="input-agendamento-4">03/07/2012 <br> 13:00</label>
+                    <div class="col-md-4 mb-3">
+                        <label class="form-label" for="input-telefone">Telefone <span class="text-danger">*</span></label>
+                        <input type="text" class="form-control" placeholder="(13) 91234-4321" id="input-telefone" name="telefone" required>
                     </div>
-                </fieldset>
-            </div>
 
-            <hr>
+                    <div class="col-md-4 mb-3">
+                        <label class="form-label" for="input-idade">Idade <span class="text-danger">*</span></label>
+                        <input type="number" class="form-control" min="1" max="100" placeholder="18" id="input-idade" name="idade" required>
+                    </div>
+                </div>
+            </section>
 
+            <hr/>
 
-            <div class="perguntas-agendamento py-3 row">
-                <h2 class="mb-4 text-center">Consentimento de Participação</h2>
+            <section id="agendamento">
+                <div class="data-agendamento py-3">
+                    <h2 class="mb-4 text-center">Agendamento</h2>
 
-                <p>
-                    Este documento faz parte da documentação do projeto “Santos às Cegas” e tem o objetivo de apontar e firmar os entendimentos e concordâncias relativas as condicionantes dos trajetos que ocorrerão na ciclovia da Orla de Santos.
-                    <b>A CONCORDÂNCIA DIGITAL FIRMA A VERACIDADE DAS INFORMAÇÕES PRESTADAS POR MIM, VONTADE PRÓPRIA E CONSENTIMENTO DE ESTAR DE ACORDO COM AS INFORMAÇÕES PRESTADAS NO PROJETO.</b>
-                    Caso você tenha alguma resposta SIM no primeiro questionário (Prontidão para Atividade Física - 1 a 8) a sua participação estará condicionada a apresentação de um atestado médico no dia do seu trajeto. Nas três questões finais (9, 10 e 11), caso você responda "NÃO" está opção inviabiliza infelizmente sua participação.
-                    Tem dúvidas? Escreva para santosascegas@gmail.com
-                </p>
-
-                <div id="perguntas" class="mt-3 gx-5">
-                    <fieldset class="mb-3">
-                        <p class="form-label">1. Prontidão para Atividade Física - Algum médico já disse que você possui algum problema de coração e que só deveria realizar atividade física supervisionado por profissionais de saúde?</p>
+                    <div id="buttons" class="d-md-flex justify-content-around">
                         <div>
+                            <input class="d-none" type="radio" name="input-agendamento" id="input-agendamento-1" value="02/07/2012-09:30">
+                            <label class="btn border-dark p-4" for="input-agendamento-1">02/07/2012 <br> 09:30</label>
+                        </div>
+
+                        <div>
+                            <input class="d-none" type="radio" name="input-agendamento" id="input-agendamento-2" value="02/07/2012-10:30">
+                            <label class="btn border-dark p-4" for="input-agendamento-2">02/07/2012 <br> 10:30</label>
+                        </div>
+
+                        <div>
+                            <input class="d-none" type="radio" name="input-agendamento" id="input-agendamento-3" value="03/07/2012-08:00">
+                            <label class="btn border-dark p-4" for="input-agendamento-3">03/07/2012 <br> 08:00</label>
+                        </div>
+
+                        <div>
+                            <input class="d-none" type="radio" name="input-agendamento" id="input-agendamento-4" value="03/07/2012-13:00">
+                            <label class="btn border-dark p-4" for="input-agendamento-4">03/07/2012 <br> 13:00</label>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <hr/>
+
+            <section id="perguntas">
+                <div class="perguntas-agendamento py-3 row">
+                    <h2 class="mb-4 text-center">Consentimento de Participação</h2>
+
+                    <p>
+                        Este documento faz parte da documentação do projeto “Santos às Cegas” e tem o objetivo de apontar e firmar os entendimentos e concordâncias relativas as condicionantes dos trajetos que ocorrerão na ciclovia da Orla de Santos.
+                        <strong>A CONCORDÂNCIA DIGITAL FIRMA A VERACIDADE DAS INFORMAÇÕES PRESTADAS POR MIM, VONTADE PRÓPRIA E CONSENTIMENTO DE ESTAR DE ACORDO COM AS INFORMAÇÕES PRESTADAS NO PROJETO.</strong>
+                        Caso você tenha alguma resposta SIM no primeiro questionário (Prontidão para Atividade Física - 1 a 8) a sua participação estará condicionada a apresentação de um atestado médico no dia do seu trajeto. Nas três questões finais (9, 10 e 11), caso você responda "NÃO" está opção inviabiliza infelizmente sua participação.
+                        Tem dúvidas? Escreva para santosascegas@gmail.com
+                    </p>
+
+                    <div id="perguntas" class="mt-3 gx-5">
+                        <p class="form-label">1. Prontidão para Atividade Física - Algum médico já disse que você possui algum problema de coração e que só deveria realizar atividade física supervisionado por profissionais de saúde?</p>
+                        <div class="mb-3">
                             <div class="form-check form-check-inline w-48">
                                 <input class="form-check-input" type="radio" name="question-one" id="question-one-yes" value="sim" checked>
                                 <label class="form-check-label" for="question-one-yes">Sim</label>
@@ -104,11 +126,9 @@
                                 <label class="form-check-label" for="question-one-no">Não</label>
                             </div>
                         </div>
-                    </fieldset>
 
-                    <fieldset class="mb-3">
                         <p class="form-label">2. Você sente dores no peito quando pratica atividade física?</p>
-                        <div>
+                        <div class="mb-3">
                             <div class="form-check form-check-inline w-48">
                                 <input class="form-check-input" type="radio" name="question-two" id="question-two-yes" value="sim" checked>
                                 <label class="form-check-label" for="question-two-yes">Sim</label>
@@ -118,11 +138,9 @@
                                 <label class="form-check-label" for="question-two-no">Não</label>
                             </div>
                         </div>
-                    </fieldset>
 
-                    <fieldset class="mb-3">
                         <p class="form-label">3. No último mês, você sentiu dores no peito quando praticou atividade física?</p>
-                        <div>
+                        <div class="mb-3">
                             <div class="form-check form-check-inline w-48">
                                 <input class="form-check-input" type="radio" name="question-three" id="question-three-yes" value="sim" checked>
                                 <label class="form-check-label" for="question-three-yes">Sim</label>
@@ -132,11 +150,9 @@
                                 <label class="form-check-label" for="question-three-no">Não</label>
                             </div>
                         </div>
-                    </fieldset>
 
-                    <fieldset class="mb-3">
                         <p class="form-label">4. Você apresenta desequilíbrio devido à tontura e/ ou perda de consciência?</p>
-                        <div>
+                        <div class="mb-3">
                             <div class="form-check form-check-inline w-48">
                                 <input class="form-check-input" type="radio" name="question-four" id="question-four-yes" value="sim" checked>
                                 <label class="form-check-label" for="question-four-yes">Sim</label>
@@ -146,11 +162,9 @@
                                 <label class="form-check-label" for="question-four-no">Não</label>
                             </div>
                         </div>
-                    </fieldset>
 
-                    <fieldset class="mb-3">
                         <p class="form-label">5. Você possui algum problema ósseo ou articular que poderia ser piorado pela atividade física?</p>
-                        <div>
+                        <div class="mb-3">
                             <div class="form-check form-check-inline w-48">
                                 <input class="form-check-input" type="radio" name="question-five" id="question-five-yes" value="sim" checked>
                                 <label class="form-check-label" for="question-five-yes">Sim</label>
@@ -160,11 +174,9 @@
                                 <label class="form-check-label" for="question-five-no">Não</label>
                             </div>
                         </div>
-                    </fieldset>
 
-                    <fieldset class="mb-3">
                         <p class="form-label">6. Você toma atualmente algum medicamento para pressão arterial e/ou problema de coração?</p>
-                        <div>
+                        <div class="mb-3">
                             <div class="form-check form-check-inline w-48">
                                 <input class="form-check-input" type="radio" name="question-six" id="question-six-yes" value="sim" checked>
                                 <label class="form-check-label" for="question-six-yes">Sim</label>
@@ -174,11 +186,9 @@
                                 <label class="form-check-label" for="question-six-no">Não</label>
                             </div>
                         </div>
-                    </fieldset>
 
-                    <fieldset class="mb-3">
                         <p class="form-label">7. Sabe de alguma outra razão pela qual você não deve praticar atividade física?</p>
-                        <div>
+                        <div class="mb-3">
                             <div class="form-check form-check-inline w-48">
                                 <input class="form-check-input" type="radio" name="question-seven" id="question-seven-yes" value="sim" checked>
                                 <label class="form-check-label" for="question-seven-yes">Sim</label>
@@ -188,11 +198,9 @@
                                 <label class="form-check-label" for="question-seven-no">Não</label>
                             </div>
                         </div>
-                    </fieldset>
 
-                    <fieldset class="mb-3">
                         <p class="form-label">8. Tem diabetes?</p>
-                        <div>
+                        <div class="mb-3">
                             <div class="form-check form-check-inline w-48">
                                 <input class="form-check-input" type="radio" name="question-eight" id="question-eight-yes" value="sim" checked>
                                 <label class="form-check-label" for="question-eight-yes">Sim</label>
@@ -202,11 +210,9 @@
                                 <label class="form-check-label" for="question-eight-no">Não</label>
                             </div>
                         </div>
-                    </fieldset>
 
-                    <fieldset class="mb-3">
                         <p class="form-label">9. Informações e fornecimento de equipamentos para a segurança sanitária - Declaro que seguirei as orientações para posturas adequadas durante a pandemia e utilizarei os equipamentos e insumos fornecidos: máscara e touca descartável, capacete e uso de álcool em gel durante o trajeto.</p>
-                        <div>
+                        <div class="mb-3">
                             <div class="form-check form-check-inline w-48">
                                 <input class="form-check-input" type="radio" name="question-nine" id="question-nine-yes" value="sim" checked>
                                 <label class="form-check-label" for="question-nine-yes">Sim</label>
@@ -216,11 +222,9 @@
                                 <label class="form-check-label" for="question-nine-no">Não</label>
                             </div>
                         </div>
-                    </fieldset>
 
-                    <fieldset class="mb-3">
                         <p class="form-label">10. Da ciência da atividade esportiva - Reconheço e assumo livremente os riscos conhecidos, e entendo que, como qualquer atividade física a prática do ciclismo, mesmo em condições controladas, possui algum risco de acidente, como: lesões, escoriações, quedas e assim assumo responsabilidade pela minha participação e/ou de meu responsável legal:</p>
-                        <div>
+                        <div class="mb-3">
                             <div class="form-check form-check-inline w-48">
                                 <input class="form-check-input" type="radio" name="question-ten" id="question-ten-yes" value="sim" checked>
                                 <label class="form-check-label" for="question-ten-yes">Sim, autorizo</label>
@@ -230,11 +234,9 @@
                                 <label class="form-check-label" for="question-ten-no">Não, não autorizo</label>
                             </div>
                         </div>
-                    </fieldset>
 
-                    <fieldset class="mb-3">
                         <p class="form-label">11. Da cessão do direito de imagem - Autorizo o uso de minha imagem e voz (e/ou de meu responsável) em todo e qualquer material de divulgação, seja vídeo, áudio ou impresso, para ser utilizado pelo projeto Santos às Cegas e/ou equipes de imprensa autorizadas. A presente autorização é concedida a título gratuito, abrangendo o uso em todo território nacional e no exterior, em todas as suas modalidades e, em destaque, das seguintes formas: (I) vídeo; (II) sites; (III) relatórios (IV) programas de televisão, rádio, reportagens para jornais e revistas; (V) redes sociais (Facebook, Youtube, Instagram, outros); entre outras peças de comunicação, por período indeterminado. Por esta ser a expressão da minha vontade declaro que autorizo o uso anteriormente descrito sem que nada haja a ser reclamado a título de direitos conexos à imagem ou a qualquer outro, e assino a presente autorização.</p>
-                        <div>
+                        <div class="mb-3">
                             <div class="form-check form-check-inline w-48">
                                 <input class="form-check-input" type="radio" name="question-eleven" id="question-eleven-yes" value="sim" checked>
                                 <label class="form-check-label" for="question-eleven-yes">Sim, autorizo</label>
@@ -244,28 +246,32 @@
                                 <label class="form-check-label" for="question-eleven-no">Não, não autorizo</label>
                             </div>
                         </div>
-                    </fieldset>
+                    </div>
                 </div>
-            </div>
 
-            <div class="form-check">
-                <input class="form-check-input" type="checkbox" id="termo-de-consentimento" required>
-                <label class="form-check-label" for="termo-de-consentimento">
-                    Aceito os <a href="#">termos de consentimento</a> dos riscos envolvidos no passeio
-                </label>
-            </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="termo-de-consentimento" required>
+                    <label class="form-check-label" for="termo-de-consentimento">
+                        Aceito os <a href="#">termos de consentimento</a> dos riscos envolvidos no passeio
+                    </label>
+                </div>
 
-            <div class="form-check">
-                <input class="form-check-input" type="checkbox" id="atestado-medico" required>
-                <label class="form-check-label" for="atestado-medico">
-                    Eu me <strong>comprometo em trazer Atestado Médico</strong> possibilitando atividades físicas aeróbicas
-                </label>
-            </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="atestado-medico" required>
+                    <label class="form-check-label" for="atestado-medico">
+                        Eu me <strong>comprometo em trazer Atestado Médico</strong> possibilitando atividades físicas aeróbicas
+                    </label>
+                </div>
 
-            <div class="col-12 mt-4">
-                <button id="form-agendamento-submit" class="btn btn-primary" type="submit">Enviar</button>
-            </div>
+                <div class="col-12 mt-4">
+                    <button id="form-agendamento-submit" class="btn btn-primary" type="submit" accesskey="E">Enviar</button>
+                </div>
+            </section>
         </form>
+
+        <footer class="mt-2 text-center">
+            <p>&copy; IHC. Todos os Direitos Reservados.</p>
+        </footer>
     </div>
 </body>
 </html>
